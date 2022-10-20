@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Kachnar city</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/42.webp"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/44.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/45.jpeg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Kachnar City Temple is a major tourist destination of Jabalpur city. Here you get to see a very beautiful statue of Lord Shiva. This statue is very tall, people come from far and wide to see this statue.  A very beautiful garden has been built in the Kachnar City Temple and this beautiful statue has been built in the middle of the garden . Apart from the statue of Lord Shiva in the garden, there are other statues which are very beautiful. 12 Jyotirlingas have also been established here. The white stone idol of Nandi Bhagwan is also situated in front of the huge statue of Lord Shiva.
+</p>
+
+
+<h2 align="center"> Location </h2>
+<p>
+  Kachnar City Temple is located at Vijay Nagar in  Jabalpur district. Jabalpur is a district of Madhya Pradesh, Jabalpur district is also known as Sanskardhani. Here you get to see many places of interest, out of which  Kachnar City Temple . It is also a major tourist spot. The distance of Kachnar City Temple from Jabalpur Railway Station will be 7 to 8 km. You have to go till Vijay Nagar Chowk to reach this temple. If you come by auto, then you will have to go on foot from the check to this temple. The distance from the check to the temple can be 1 km. You can also come here by metro bus. Metro bus will also leave you till Vijay Nagar check, the rest of the way you will have to go on foot. You get a paved road to reach here. Metro buses and autos keep running to reach here. You will get any metro bus and auto to go here from any area of ​​Jabalpur. You can also easily reach this temple by your own vehicle
+</p>
+
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

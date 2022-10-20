@@ -1,0 +1,144 @@
+<!-- images -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/101.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/106.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/111.jpg" >
+       
+    </div>
+    <br>
+    </div>
+
+    <div class="text">
+        <h1> description</h1>
+    <h3>
+      Places to visit near Jabalpur like Bheda Ghat, Bargi Hills, Nidan Falls, Bandhavgarh National Park, Kanha National Park and more such interesting places which are  to get away from the exhausting routine of city life and relax in the lap of nature or you want to explore places that will transport you to a centuries-old world, Jabalpur is surrounded by gems of places that can be conveniently visited during weekends.
+    </h3>
+    </div>
+
+    <!-- flip flop -->
+
+    <div class="main">
+       
+  
+        <div class="card">
+            <div class="face front">
+                <img src="images/92.jpg" alt="">
+                <h3>Dumna National Park</h3>
+            </div>
+            <div class="face back">
+               
+                <p>
+                  The Dumna Nature Reserve (DNR) of Jabalpur Municipal Corporation is spread over nearly 1800 acres of forested land on a plateau, about 40 meters above Jabalpur town. It was transferred to the Municipal Committee of Jubbulpore by the provincial government to act as the catchment area for the Khandari lake. The construction of Khandari Dam materialized in February 1883 under J.H. Morris, Chief Commissioner of the Central Provinces and Berar. Since then, the forested area provides rainwater to feed the Khandari Reservoir. 
+                </p>
+                 
+                <div class="link">
+                  <a href="Dumna Nature Park/index.html">Details</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="face front">
+                <img src="images/95.jpg" alt="">
+                <h3>Sangram Sagar Lake</h3>
+            </div>
+            <div class="face back">
+                
+               <p>
+                Sangram Sagar Lake happens to be a highly popular tourist spot of Jabalpur. Situated at a distance of about 15km from the city of Jabalpur, this lake was constructed by the Gond ruler Sangram Shah in the 15th Century. Many buildings of the medieval period (Middle Ages) can be seen here
+              </p>
+                <div class="link">
+                  <a href="Sangram Sagar/index.html">Details</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+          <div class="face front">
+              <img src="images/100.jpg" alt="">
+              <h3>Bhawartal Garden</h3>
+          </div>
+          <div class="face back">
+            <p> 
+              Bhawartal Garden, situated in the heart of the city centre of Jabalpur is a very popular destination for children and age-old adults as well. The garden is ornamented with a number of slides, toy trains, and swings. The garden hosts early morning yoga and fitness sessions. It is also one of the most loved places to visit in Jabalpur for arranging get-togethers and picnics.
+            </p>
+              <div class="link">
+                <a href="Bhawartal Garden/index.html">Details</a>
+              </div>
+          </div>
+      </div>
+    
+      <div class="card">
+        <div class="face front">
+            <img src="images/103.jpg" alt="">
+            <h3>Devtal Garden</h3>
+        </div>
+        <div class="face back">
+           <p>
+            A picturesque pond the Devtal Garden and Pond serve as a vent of air amidst warmth belts of city existentialism. Literally translated to God's Pond, the Devtal is as ageless as God and hence is widely believed to be one of the oldest Tal inside the city. The pond incorporates a historic significance with it. It is stated to were built for the duration of the Gond dynasty and temples built across the pond create a juxtaposition of cultural and non secular hubs in the metropolis.
+          </p>
+            <div class="link">
+              <a href="Devtal/index.html">Details</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+      <div class="face front">
+          <img src="images/109.jpg" alt="">
+          <h3>Jalpari</h3>
+      </div>
+      <div class="face back">
+         <p> Jabalpur is a beautiful city of central India, surrounded by natural landscapes, hills, rivers and water bodies. The name is derived from Arabic word, “JABAL” which mean boulders. It is located in the Narmada Valley and is well connected by road, (NH-7). Also it is a major railway station in central India for railways. 
+        </p>
+            <div class="link">
+            <a href="Jalpari/index.html">Details</a>
+          </div>
+      </div>
+    </div>
+    
+  
+    </div>
+        
+
+   
+</head>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

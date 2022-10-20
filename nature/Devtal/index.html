@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Devtal Garden</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/104.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/106.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/107.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  The kingdom prospered under the rule of Rani Durgawati. She fought several battles—not just to keep her kingdom intact, but also to expand it. After fighting the Malwa rulers and capturing their territory, her state touched the border of the Mughal dominion. Durgawati put up a courageous fight against the Mughals, despite knowing that her army and weaponry were outnumbered by that of the Mughals. Towards the end of a bloody battle, which injured both her and her son, she knew that defeat was certain. Her mahout advised her to leave the battlefield, but Rani refused and killed herself with a dagger on June 24, 1564. Her martyrdom has been commemorated as Balidan Diwas by the Madhya Pradesh government. 
+
+During her rule, Rani Durgawati commissioned many gardens, temples and administrative buildings, which are still in use. We shall begin our walk at the Shail Parna Udyaan, a beautiful park with thick foliage, a lot of flora and a small lake. Here, one can escape the bustle of the city, hear the birds chirp and understand the natural heritage of the region. We shall then walk towards the Devtal group of monuments, which was built in the 13th century under the reign of Rani Durgawati. 
+
+Devtal literally translates to god’s lake, and the lake here is believed to be the oldest in the city. It is surrounded by small temples built in a similar style. The presence of these temples gives this otherwise serene and simple setting a royal touch. During the course of the walk, we shall discuss the architectural nuances of the temple, along with their history and significance.
+</p>
+
+<p>
+  But there is more to this walk than just walking and talking. Heritage is best understood by observation and interpretation. Its cultural and social nuances are only discovered when one delves into its details, and relates to it at a deeper level. Thus, participants are encouraged to carry their sketchbooks and interpret the heritage through their art. Towards the end of the walk, we shall have a sketching and painting session in the pristine environs of Devtal. Artists can indulge in either built or natural heritage. The selected entries shall be published online. 
+
+This walk shall be led by Medha Dube, the principal architect and founder of Medhira Designs, a multidisciplinary design firm, which is the very first conservation architectural firm of Jabalpur that works primarily on the undocumented and unprotected heritage of the city. Medha, a resident of Jabalpur, knows every nook and cranny of the city. She is also a vivacious storyteller and is an assistant professor at the Hitkarini College of Architecture and Town Planning. She regularly conducts heritage walks and talks in the city.
+
+So, come discover the legacy of Rani Durgawati, explore the hidden gems of Jabalpur and give impetus to your artistic endeavours as you translate heritage onto paper.
+</p>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

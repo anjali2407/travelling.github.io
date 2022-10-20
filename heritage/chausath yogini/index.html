@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Chausath Yogini temple</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/113.webp"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/114.JPG" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/115.JPG" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  The Chausath Yogini Temple, Bhedaghat, also called the Golaki Math ("circular lodge"),[1] is one of India's yogini temples, but exceptionally it has shrines for 81 rather than the usual 64 yoginis. All the same, scholars include it among the 64-yogini temples (चौंसठ chausath meaning 64 in Hindi). The group of 81 (ekashiti in Hindi) is a mark of royalty, implying that the temple was founded by a king. The large temple is on a hilltop above the river Narmada in Bhedaghat (Hindi भेड़ाघाट, also transliterated Bheraghat), some 5 km from Jabalpur, Madhya Pradesh
+</p>
+
+
+<h2 align="center"> Temple </h2>
+<p>
+  The temple is the largest of the circular yogini temples, some 125 feet in diameter.The scholar Shaman Hatley calls it the "most imposing and perhaps best known of the yogini temples".[7] It has a covered walkway with 81 cells for yoginis around the inside of its circular wall; three niches, two to the west, and one to the southeast, remain open as entrances. There is a later shrine in the centre of the courtyard;[7] the temple was adapted as a Gauri-Shankar temple with the construction of the building in the south-centre of the circle in 1155 AD, at which time the central deities (Bhairava or dancing Shiva) were moved.[8] The temple was built early in the 11th Century AD by King Yuvaraja II, of the dynasty of the Kalachuris of Tripuri; he lived around 975-1025 AD.[9] The city of Tripuri was four miles away, just across the Narmada river from the temple. According to the scholar David Gordon White, the temple would have been the Kalachuri dynasty's largest building project.[10][11] The town's name was formerly Bhairavaghat; yogini temples held an image of either Shiva or Bhairava at their centre
+</p>
+
+<h2 align="center"> Yogini images </h2>
+<p>
+  The temple contains stone images of the yoginis; among them are Kamada ("Giver of Sexual Love"), whose image includes a yonipuja, worship of the yoni.[10][12] The 81 images include 8 Matrikas, Mother goddesses, from an earlier time;[13] one of them is Chandika, who is depicted riding a human corpse in a cremation ground.Three niches are now occupied by male gods, namely a dancing Ganesh and two Shivad, most likely from the central shrine as originally constructed. The yogini images that once occupied those niches have been lost, like many of the surviving but badly damaged yogini images heavily vandalised. Most of the images have had their faces broken; some survive only from the waist down. One image, that of the horse-faced yogini Erudi, survives in perfect condition.
+</p>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

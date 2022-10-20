@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Raj kumari Bai Ki Kothi</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/121.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/122.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/123.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  
+
+Rajakumari Bai Kothi is a majestic Italian style mansion built by Raja Gokuldas for his grand daughter. But, in later years it became a part of a famous Royal Hotel. Now this historic mansion is occupied by Madhya Pradesh Electricity Board. Jabalpur City, 336 km from Bhopal, is well connected by a good network of road and rail. 
+</p>
+
+
+<h2 align="center"> Location </h2>
+<p>
+  abalpur, Govindh Bhavan Colony, South Civil Lines, Madhya Pradesh.
+</p>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

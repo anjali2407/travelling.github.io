@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Tripur Sundari</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/46.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/48.webp" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/49.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Tripura Sundari Temple is a Hindu temple of the Goddess Tripura Sundari, better known locally as Devi Tripureshwari. The temple is situated in the ancient city of Udaipur, about 55 km from Agartala, Tripura and can be reached by train and road from Agartala. It is believed to be one of the holiest Hindu shrines in this part of the country and witnesses the highest number of visitors for a temple in North-East India, after Kamakhya Temple in Assam. The state of Tripura is named after this temple. Popularly known as Matabari, the shrine is set upon a small hillock that resembles the hump of a tortoise (Kurma). This shape called Kurmapṛṣṭhākṛti is considered the holiest possible site for a Shakti temple, hence also bestowing the name of Kurma Pīṭha.[1]The Goddess is served by traditional Brahmin priests.
+</p>
+<p>
+  The temple is considered to be one of the 51 Shakti Peethas; legend says that the little finger of the left leg of Sati fell here. Here, Shakti is worshipped as Tripurasundarī and the accompanying Bhairava is Tripuresh. The main shrine, a cubical edifice with a three-tier roof with a finial, erected by Maharaja of Tripura Dhanya Manikya in 1501 AD, is constructed in the Bengali Ek-ratna style.
+
+</p>
+
+<h2 align="center"> History </h2>
+<p>
+  Legend has it that King Dhanya Manikya, who ruled over Tripura in the closing years of the 15th century, had a revelation one night in a dream in which Goddess Tripura Sundari instructed him to initiate her worship on the hilltop near the town of Udaipur, the contemporary capital of the kingdom. The king found out that a temple on the hillock was already dedicated to Lord Vishnu. He was in a dilemma, unable to decide how a temple dedicated to Vishnu could have an idol of Shakti. The following night, the divine vision was repeated. The king understood that Vishnu and Shakti were different forms of the same Supreme Deity (Brahman). Thus, the temple of Tripura Sundari came into being around the year 1501 AD.[4] In the dawn of this century, the temple has crossed 500 years. This legend is recounted as an example of solidarity between two sub-groups of Hinduism: the Vaishnava and the Shakta sects
+</p>
+
+<h2 align="center"> Attraction of Tourism </h2>
+<p>
+  In Udaipur, the Goddess is worshipped as Tripura Sundari. Local variants of the name of the goddess are Tripureśwarī or Ṣoḍaśī. The temple is a small cubical edifice, measuring 24 square feet at the base with a height of 75 feet. The shrine is situated on a small hillock which resembles in shape the hump of a tortoise, which gives it the name of Kurma Pīṭha. As in other typical Hindu temples, stalls along the road to the temple sell flowers and baskets of offerings that visitors can buy and offer to the goddess as Prasādam. The common Prasādam offered here is the Peda.[5]The red hibiscus flower (রক্তজবা) is also prized as an offering to the goddess.
+</p>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

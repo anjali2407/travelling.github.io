@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Pishanhari Ki Madiya</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/51.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/53.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/55.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Pisanhari ki Marhia is a Jain temple built in the 15th century and located in the city of Jabalpur in Madhya Pradesh, India. The temple is named after its creator, a local woman who, according to legend, paid for the construction of the temple with the money she saved from milling flour. Many other temples have since been added making this a tirtha
+</p>
+
+<h2 align="center"> History </h2>
+<p>
+  The original temple was contains two pratimas installed in 1442 CE. The name derives from the word "pisanhari", meaning a woman engaged in the work of manual milling of flour.According to legend, Pisanhari was a poor woman who saved enough money from milling flour to construct the temple.A statue of Pisanhari is at the temple's entrance, and the quern stones are still kept on top of the entrance gate of the marhia.
+
+The temple complex includes inscriptions. Though they have not yet been deciphered, they are believed to be from the 14th century
+</p>
+
+<h2 align="center"> Architecture </h2>
+
+<p>
+  The Pisanhari ki Marhia temples is a complex of 13 smaller temples including the Samavsaran Mandir, the Manastambha, the Bhagwan Bahubali statue, and the Shri Nandishwar Dweep Jinalaya, among others.Nandishwar Dweep Jinalya is the largest Jain temple in the foothills with an area of 15,000 square feet (1,400 m2). The roof of the temple is built in vault fashion, and includes a mandapa (pillared hall) and a two-story garbhagriha (inner sanctuary). The temple houses 152 marble idols of Tirthankara seated in small shrines. The temple is famous for its artwork.The temple features a 55-foot (17 m) idol of Bahubali.
+</p>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

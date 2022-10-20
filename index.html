@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -10px;
+      }
+      
+      .navbar a {
+      float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 50px;
+      }
+      
+      .dropdown {
+        margin-left: 50px;
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        /* outline: none; */
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 10px 5px;
+        text-decoration: none;
+        display: block;
+        text-align:left;
+        margin-left: 5px;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      </style>
+    <style>
+     
+
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+    </style>
+   
+
+      <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.card {
+    /* flex: 50%; */
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card:after{
+    content: "";
+    /* display: table; */
+    clear: both;
+}
+
+.card .face {
+    float: left;
+/* width: 50%; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+@media screen and (max-width: 900px){
+    .face{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .face{
+        width: 100%;
+    }
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+      </style>
+
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Explore
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="shopping/index.html">Shopping</a>
+          <a href="spiritual/index.html">Spiritual</a>
+          <a href="adventure/index.html">Adventure</a>
+          <a href="nature/index.html">Nature</a>
+          <a href="heritage/index.html">Heritage</a>
+          
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn">ShowMore
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="public ulities/index.html">public security</a>
+        </div>
+      </div>
+      <a href="Festival/index.html">festival</a>
+      <a href="login/index.html">Login</a>
+
+      
+    </div>
+
+    <!-- slideshow -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/44.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/136.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/88.jpg" >
+       
+    </div>
+    <br>
+
+
+  <!-- main cintent -->
+<div class="description" align="center" >
+  <h1  >DESCRIPTION</h1>
+   <h3  >Jabalpur is the administrative headquarters of Jabalpur district (the second-most-populous district in Madhya Pradesh) and the Jabalpur division. Historically, a center of the Kalachuri 
+    and Gond dynasties, the city developed a syncretic culture influenced by intermittent Mughal and Maratha rule. During the early nineteenth century, it was annexed by British India as Jubbulpore and incorporated as a cantonment town. Since Indian independence there have been demands for a separate state of Mahakoshal, with Jabalpur its capital. The High Court of Madhya Pradesh, headquarters of the West Central Railway and Army headquarters of five states (Madhya Pradesh, Chhattisgarh, Orissa, Bihar and Jharkhand) are located in Jabalpur. The city is also home to the Gun Carriage Factory. Jabalpur has been selected as one of the hundred Indian cities to be developed as a smart city under Smart Cities Mission. 
+    Bheraghat is a unique experience where one can see a huge mountains of marble and a beautiful waterfall.
+  </h3>
+  
+  </div> 
+
+<!-- flip flop -->
+
+<div class="main">
+  <div class="card">
+      <div class="face front">
+          <img src="images/79.jpg" alt="">
+          <h3>Bhedaghat</h3>
+      </div>
+      <div class="face back">
+         <p>Bhedaghat is famous for the high marble rocks making a valley through which river Narmada flows. The place also has a beautiful waterfall, known as Dhuandhar Falls (literally meaning a stream of smoke, because of its appearance).</p>
+          <div class="link">
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="face front">
+          <img src="images/70.jpg" alt="">
+          <h3>Khandari Lake</h3>
+      </div>
+      <div class="face back">
+         <p>Khandari WaterFall Jabalpur is a very beautiful waterfall located in the Jabalpur district. But it is a small Waterfall in Jabalpur. Khandari waterFall is formed due to the overflow of water in Khandari Lake located in Dumna Nature Reserve (Dumna Nature Park). </p>
+          <div class="link">   
+          </div>
+      </div>
+  </div>
+
+  <div class="card">
+      <div class="face front">
+          <img src="images/43.jpg" alt="">
+          <h3>Kachnar city</h3>
+      </div>
+      <div class="face back">
+         
+         <p>The Kachnar City is well known for the tourist attraction and religious destination for the locals and the people from abroad because of the tallest statue of Lord Shiva which was build in the year 2004 and was made available for the public, tourists and the devotees from 15 February 2006.</p>
+          <div class="link">
+             
+          </div>
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="face front">
+        <img src="images/130.jpg" alt="">
+        <h3>Madan Mahal Fort</h3>
+    </div>
+    <div class="face back">
+       
+       <p>The fort is also associated with the king's mother, Rani Durgavati, who happened to be a valiant Gond ruler of the place. This fort, which is at ruins at present, does speak about the aura of Rani Durgavati and her fully equipped administration and military.</p>
+        <div class="link">   
+        </div>
+    </div>
+</div>
+
+<div class="card">
+  <div class="face front">
+      <img src="images/32.jpg" alt="">
+      <h3>Gwarighat</h3>
+  </div>
+  <div class="face back">
+      <p>Gwarighat serves as a famous ghat of Narmada River. The presence half-submerged temple dedicated to Maa Narmada made this place even more special. Although half of the temple always drowns in water, it does not stop the temple's devotees from offering daily prayers and holding beautiful aarti in the evening which is attended by a huge number of people. </p>
+      <div class="link">
+          
+      </div>
+  </div>
+</div>
+
+<div class="card">
+<div class="face front">
+    <img src="images/114.JPG" alt="">
+    <h3>Chausath Yogini Temple</h3>
+</div>
+<div class="face back">
+    
+   <p>Chausath Yogini Temple is one of the oldest heritage sites in India. It was built in the 10th Century AD by the Kalachuri kingdom and has a distinct resemblance to the temples of Khajuraho in structure. The temple is the abode of Goddess Durga along with 64 yoginis. A Yogini is a female attendant of the mother goddess.</p>
+    <div class="link">
+        
+    </div>
+</div>
+</div>
+
+
+</div>
+  
+<!-- food -->
+
+<body>
+
+  <h2>Food you must try</h2>
+  
+  
+  <div class="container">
+    <img src="images/5.jpeg" alt="Avatar">
+    <p><span>Barf Ka Gola</span></p>
+    <p>Sold on cart at busy places in old market area “Lord Ganj” as well as other too for Rs10; Ice block crushed using hand operated machine and filled in to a glass. Topped up with dry coconut powder and further with flavour of your choice like orange, cola, rose, pineapple, kala khatta, lemon etc.
+      If you want to go one step further; a bread slice will also be crushed in to ice. Regarding taste; only a kid or a person with heart of a kid can. Hygiene; only parents can.<p>
+  </div>
+  
+  <div class="container">
+    <img src="images/6.jpeg" alt="Avatar" >
+    <p><span> Poha</span> </p>
+    <p>Annapurna Snacks (opp Khandelwal Furnitures, near Maharashtra School)
+  
+      This place starts early in the morning and serves Poha, Jalebi, Samosa and Alubanda.</p>
+  </div>
+  
+  <div class="container">
+      <img src="images/9.jpeg" alt="Avatar" >
+      <p><span>Falahari Chat </span> </p>
+      <p>Snacks made out of stuff from fruits and vegetables in milk fat. Most famous cart is “Baba ki Chat”. Heavy cast iron griddle kept over a wood fired furnace on a cart. Everything is cooked using pure ghee. Serving only 3 items.</p>
+    </div>
+  
+    <div class="container">
+      <img src="images/7.jpeg" alt="Avatar" >
+      <p><span>Gatpat Chat</span> </p>
+      <p>Snacks made out of stuff from fruits and vegetables in milk fat. Most famous cart is “Baba ki Chat”. Heavy cast iron griddle kept over a wood fired furnace on a cart. Everything is cooked using pure ghee. Serving only 3 items</p>
+    </div>
+  
+    <div class="container">
+      <img src="images/8.jpeg" alt="Avatar" >
+      <p><span>Tamatar Chat</span> </p>
+      <p>Mashed boiled potato flat patty filled with ginger and green chili paste, slow roasted on the griddle will crisp dark brown. Split in two, topped up with water chestnut sev (fried noodles), fried peanuts, crushed wafers, tamarind chutney, roasted cumin seed powered, rock salt, red chili powder and coriander.</p>
+    </div>
+  
+    <div class="container">
+      <img src="images/10.jpeg" alt="Avatar" >
+      <p><span>Malai Roll and Rabdi</span></p>
+      <p>Popular among business community Rabdi is made by lengthy process of slow cooking of milk and sugar for hours together. The resultant is thick condensed milk which develops a bit granular structure yet having some viscosity to crawl. Very delicious!
+          Malai roll is made from the cream which floats naturally over the surface of milk once it is boiled and allowed to cooled down. Multiple layers of above mixed with sugar and allowed to set. Delicious.</p>
+    </div>
+  
+    <div class="container">
+      <img src="images/12.jpeg" alt="Avatar" >
+      <p><span>Kulfi</span></p>
+      <p>Ingredients used are reduced milk (over prolonged slow heating), adding sugar, fry fruits. Concoction filled in to small sealed containers and dropped in to earthen pot which is already filled with ice and salt mixture. The pot is shaken continuously till the ice-cream sets. The result is soft, creamy ice cream which is hard enough to hold on stick but soft enough to bite. Rs 10 for a stick. Great stuff.
+          There are many others as well and it is easy to find one near you (wherever you are).</p>
+    </div>
+  
+    <div class="container">
+      <img src="images/13.jpeg" alt="Avatar" >
+      <p><span>Kebabs</span></p>
+      <p>Choti Omti area (Gully that goes in opp Riyaz Hotel), this small shop uses coal fired flat pit and skewers for slow cooking overnight marinated beef (buffalo meat) chunks in tomato and secret spice base. Tender, spicy, cooked to perfection served with thin slices of onions and a lemon slice.
+          There are a few shops over there in the locality.</p>
+    </div>
+  
+  </body>
+
+  <style>
+    .container {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0
+    }
+    
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /* element.style {
+        width: 150px;
+    } */
+    
+    .container img {
+      float: left;
+      margin-right:50px;
+      /* border-radius: 50%; */
+      width: 250px;
+      height: 200px;
+    }
+    
+    .container span {
+      font-size: 25px;
+      margin-right: 15px;
+    }
+    
+    @media (max-width: 500px) {
+      .container {
+          text-align: center;
+      }
+      .container img {
+          margin: auto;
+          float: none;
+          display: block;
+      }
+    }
+    </style>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

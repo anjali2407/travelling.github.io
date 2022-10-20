@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Nidan Waterfall</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/94.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/95.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/96.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Sangram Sagar Lake happens to be a highly popular tourist spot of Jabalpur. Situated at a distance of about 15km from the city of Jabalpur, this lake was constructed by the Gond ruler Sangram Shah in the 15th Century. Many buildings of the medieval period (Middle Ages) can be seen here.
+
+The beauty of the Sangram Sagar lake gets enhanced manifolds courtesy of its surroundings. The lake attracts tourists predominantly due to the migratory birds and the aquatic animals living in it. The temperature of the water in the lake is highly conducive for quite a few foreign migratory birds. The lake is aptly suitable for spending some time in absolute peace, bliss and solace. The tranquillity this place offers is indeed quite fascinating.
+
+The surrounding natural beauty is truly majestic and it makes an ideal setting for capturing this wonderful beauty of nature through the lenses of a camera. Thus, it almost goes without saying that this place is a perfect one to click and capture some of the enthralling natural beauty offered. Even just strolling around the lake would provide one a unique feeling of enjoyable solitude. Thus, this is a great spot to unwind, relax and rejuvenate for a few days away from the hectic and hustles of core city life.
+
+The Sangram Sagar Lake is located in close proximity to the Bajnamath mandir. The Sangram Sagar Lake in Jabalpur truly is a remarkable spot and a very good one to be spending some great and quality time with family and friends.
+</p>
+
+
+<h2 align="center"> Timing </h2>
+<p>Sangram Sagar Lake can be visit during 08:00 AM to 05:00 PM</p>
+
+
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

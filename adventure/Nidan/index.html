@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Nidan Waterfall</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/65.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/66.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/67.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Nidan Falls also often referred to as the Katangi Falls is an eye pleasing water fall which is situated in the village of Bhainsa in Jabalpur, Madhya Pradesh, India. The waterfall is located at a distance of 30 kms from the Jabalpur city centre and can be reached by car, taxi or bus.
+
+</p>
+
+
+<h2 align="center"> Location </h2>
+<p>
+  The falls can be located at 1 km distance from the main road. It can be identified as the stream flowing down between the high black rocks which fall from a height of more than 100 ft. This fall is also called as Nidan Kund. The black stones have an irregular surface and forms step like apparition which makes the view of the waterfall even more breathtakingly beautiful. The fall of water from such great height creates a misty atmosphere which is very pleasant to witness. The falls are present in lush green surroundings providing a picturesque scenery.
+</p>
+
+<h2 align="center"> Attraction </h2>
+<p>
+  The monsoon season accompanies a rise in water levels making the Nidan Falls a perfect spot to spend some time with friends and family. Thus the best time to visit the falls is after monsoon in the month of July and September. In order to explore the beauty of nature in all its wilderness which the falls has to offer, one must be ready to spare at least 2 hours from their schedules.
+
+Nadin Falls makes a perfect vacation spot for all the nature enthusiasts and adventure seekers. Adventure activity like trekking can be taken up by interested visitors to track the entire distance of the falls. A long hike across the lush green surroundings of the falls can also be a fun activity that can be considered. Visitors can also relax and soothe themselves by taking a plunge in the fresh water of the river. It becomes a perfect picnic spot during the months of September and October as the water dries up. The falls can be visited between the sunrise and sunset. Staying after sunset is not advisable. The best time to visit is between 6:00 AM - 7:30 PM. The luxuriate experience of the Nadin Falls is free for all visitors.
+</p>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

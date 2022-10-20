@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Bagri Dam</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/74.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/75.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/76.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  The Bargi Dam is one of the first completed dams in a series of 30 major dams to be built on the Narmada River in Madhya Pradesh , India . [1] Two major irrigation projects namely Bargi Diversion Project and Rani Avantibai Lodhi Sagar Project have been developed by Bargi Dam . Narmada is the largest river of Madhya Pradesh, which flows westwards and joins the Arabian Sea . Its total length is 1312 km, out of which 1072 km flows through the land of Madhya Pradesh.
+  The height of the dam is 69 meters and the length is 5.4 km. And a lake formed from it, with a length of about 75 km and a width of 4.5 km, is spread over 267.97 sq km. [3] Jabalpur , Mandla and Seoni districts were formed after the water in the dam reached 422.76 metres.
+</p>
+
+
+<h2 align="center"> Bargi Project </h2>
+<p>
+  The name of this project is also Rani Avanti Bai Nadi Sagar Project which is located on the Narmada River. The Bargi Dam project is located on the Bargi River. This dam is 69 meters high and 5.4 km wide and generates 90 MW of electricity. The capacity is 100 MW but currently 90 MW is being generated from this project 3 districts of Madhya Pradesh are benefited which are as follows
+
+1 ) Jabalpur
+
+2 ) Mandala
+
+3) Shivani
+
+There are a total of 184 villages in this project, currently 95000 square kilometer area is irrigated. If the Bargi dam is considered in a way, then it is a boon of the people living on the banks of Narmada. The water of Narmada river is spread over very long distances, at the time when the dam was being built, the people around it were displaced. Narmada river 1312 km It travels in the Arabian Sea, it is a river that flows from east to west.
+
+Beginning of Bargi Dam
+
+According to the DPR smelly regime, the idea of ​​making this dam started in the year 1968, where the Central Water and Electricity Commission made a plan of 2980 square kilometers keeping in mind the irrigation project, later it changed to 4370 km under the irrigation project. While the construction work of this dam started in the year 1977 and this dam was not started till it was completely filled with water, this dam was finally ready in 1990 and almost till it has a lot of water. It started when the water filled
+
+According to engineer report
+
+Whether any building or bridge is to be constructed, before the construction of the dam, the place has to be surveyed, then the survey was done before the construction of the dam.
+
+Their survey is done in 2 parts.
+
+1) Preliminary Survey
+
+2) Detailed Survey
+
+The first survey is done by studying the shapes, the categories are studied, after that the area decides, listen to the area, which area is right or not, should the dam be built here or not, if it should be built then the second Survey is also called detail survey, according to this survey, all the flora and fauna of that area are studied, how many rocks are present there, their detailed step study is done, engineering properties are studied. and their aquatic properties are also studied, 184 villages were being affected in the making of this dam, due to which they were displaced.
+
+about dam rocks
+
+The rocks here are black in color, which is called basalt rock A or basalt rock is made of volcano and is very hard rocks, the initial trend is neither permeability nor concentration, Bargi Dam has a total of 27 gates. I keep 21 on, the rest of the gates are opened before the water is about to flow over the dam, determining the age of any dam is based on its erosion and the silt flowing in the river. Going near the dam, it will freeze and the water will reduce, due to which the dam can also be closed and there is less water left in that place and the leakage of water in erosion decides how the soil is there, this dam is counted in one unit of Madhya Pradesh. goes
+</p>
+
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

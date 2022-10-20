@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Gwarighat</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/27.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/32.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/29.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p >
+  Gwarighat is a small town on the banks of the river Narmada near the city of Jabalpur in Madhya Pradesh, India. Hindus perform their cremation rites here as per Garuda Purana. It is associated with Hindu Puranas, also; due to the presence of Narmada Sidh Kund, near Uma Ghat, wherein renowned Rishis performed Tapas (Indian religions), and it is believed that people are cured of their ailments here. Maa Narmada Temple is also situated here, where Narmada Aarti, is performed in the evenings.[2]
+
+Being a Hindu site for cremation rites and other religious ceremonies there are other castes religious monuments here too; as Gurdwara Gwari Ghat Saheb of Guru Nanak,[citation needed] the founder of Sikhism, who reformed several thugs and criminals here, a temple and ashram dedicated to Sai Baba followers, and Jain temple. Madan Mahal Rani Durgawati Fort is also associated with religious tourism here.[3]
+
+During Kartik (month), a huge fair is held at Gwarighat, which is supported by the local government, who also take care of the temples here, due to their antiquity.[4]
+
+Ram Nath Kovind (President of India), visited Jabalpur on 6 March 2021 to attend the Narmada aarti at Gwarighat on the banks of the river Narmada.
+</p>
+<p>
+  The most beautiful ghat of the sacred Narmada river and famous for its temples such as Shri Ramlala Mandir, Ganesh Mandir, Gurdwara, and Jain temple. You can sit on the banks of the river to just relax and see the water flow by. There is a Sikh temple on this ghat where you can sit and hear the Gurbani to calm the restless soul. If you want to indulge in some activity you can also try boating. The calm waters of the Narmada River make for a great boating experience.
+
+During the evenings the entire ghat area transforms into a picture book setting as diyas and lamps light up around the river banks for the evening Aarti. This arti gives a similar feel like the Ganga Aarti in Haridwar.
+
+Aarti Timings: 7 PM - 7.30 PM
+</p>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

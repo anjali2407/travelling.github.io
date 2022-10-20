@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Khandari Lake</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/69.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/70.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/71.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Khandari WaterFall Jabalpur is a very beautiful waterfall located in the Jabalpur district. But it is a small Waterfall in Jabalpur. Khandari waterFall is formed due to the overflow of water in Khandari Lake located in Dumna Nature Reserve (Dumna Nature Park). It comes first on the list of Jabalpur tourist places.
+</p>
+
+
+<h2 align="center"> Beauty of Khandari lake </h2>
+<p>
+  The beauty of Khandari Falls Jabalpur can be seen in the rainy season. Because the rainy season is when all the lakes on the earth get filled with water. Similarly, during the rainy season water fills Khandari lake Jabalpur (Khandari Jheel), due to which the water of the Khandari dam starts overflowing. A little further, where the water of Khandari Lake (Khandari dam) overflows, another waterfall is formed, which is very beautiful to see.
+
+Although Khandari waterfall Jabalpur is small and the water falls from the mountains here, which is very nice to see. The atmosphere here resonates with the waterfalls of Khandari Lake (Khandari Jheel). Also, this place is full of greenery. If you want to spend your time in peace and quiet and on nature’s lap, then this place is suitable for you. You can have a picnic as well as have a good time here.
+</p>
+
+<h2 align="center"> Restriction </h2>
+<p>
+  In the year 2019, there was an accident near Khandari waterFall. A little further, where the water of Khandari Lake overflows, it forms a pool, which is quite deep. Unfortunately, a person drowned in this pool, due to which access to this waterfall has been banned since then. Be careful if you visit this waterfall. Don’t be careless. Because it is very slippery here in the rain. So if you are looking for this kind of place to spend a good time with your friends and family then definitely visit Khandari Falls Jabalpur once.
+</p>
+
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>

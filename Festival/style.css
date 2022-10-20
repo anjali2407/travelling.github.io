@@ -1,0 +1,325 @@
+
+.div2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  margin-left: -125px;
+  margin-top: -105px;
+  
+}
+
+.div1{
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 55px;
+margin-left: -125px;
+
+}
+.card0{
+display: grid;
+grid-template-columns: 300px;
+grid-template-rows: 250px 250px ;
+grid-template-areas: "image" "text" ;
+width: 5px;
+border-radius: 10px;
+background: white;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+border: 2px solid white;
+
+}
+
+.card0-text{
+grid-area: text;
+
+}
+.card0-image{
+grid-area: image;
+background: url("festivals/lohri\ \(1\).jpg");
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+.card0-text{
+grid-area: text;
+margin: 25px;
+}
+.card0-text .date{
+color:rgb(255, 7, 110);
+font-size: 13px;
+}
+.card0-text p{
+color:grey;
+font-size: 15px;
+/* font-weight: 300; */
+margin-bottom: 80px;
+}
+.card0-text h2{
+  color: rgb(45, 113, 173);
+margin-top: 0px;
+font-size: 28px;
+}
+.card0:hover{
+transform: scale(1.125);
+box-shadow: 5px 5px  rgba(203, 9, 9, 0.6);
+}
+
+.card0{
+transition: 0.5s ease;
+cursor: pointer;
+/*   margin: -28px;*/
+}
+
+
+/* card2 */
+
+.card1{
+ display: grid;
+grid-template-columns: 300px;
+grid-template-rows: 250px 250px ;
+grid-template-areas: "image" "text" ;
+width: 3px;
+border-radius: 10px;
+background: white;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+border: 2px solid white;
+
+}
+
+.card1-text{
+grid-area: text;
+}
+.card1-image{
+grid-area: image;
+background: url("festivals/mo.jpg");
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+.card1-text{
+grid-area: text;
+margin: 25px;
+}
+.card1-text .date{
+color:rgb(255, 7, 110);
+font-size: 13px;
+}
+.card1-text p{
+color:grey;
+font-size: 15px;
+font-weight: 300;
+}
+.card1-text h2{
+  color: rgb(45, 113, 173);
+margin-top: 0px;
+font-size: 28px;
+}
+.card1:hover{
+transform: scale(1.125);
+box-shadow: 5px 5px  rgba(203, 9, 9, 0.6);
+
+}
+.card1{
+transition: 0.5s ease;
+cursor: pointer;
+}
+
+
+/*card3*/
+
+.card3{
+display: grid;
+grid-template-columns: 300px;
+grid-template-rows: 250px 250px ;
+grid-template-areas: "image" "text" ;
+width: 5px;
+border-radius: 10px;
+background: white;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+border: 2px solid white;
+
+}
+
+.card3-text{
+grid-area: text;
+}
+.card3-image{
+grid-area: image;
+background: url("festivals/diwali.jpg");
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+.card3-text{
+grid-area: text;
+margin: 25px;
+}
+.card3-text .date{
+color:rgb(255, 7, 110);
+font-size: 13px;
+}
+.card3-text p{
+color:grey;
+font-size: 15px;
+font-weight: 300;
+}
+.card3-text h2{
+  color: rgb(45, 113, 173);
+margin-top: 0px;
+font-size: 28px;
+}
+.card3:hover{
+transform: scale(1.125);
+box-shadow: 5px 5px  rgba(203, 9, 9, 0.6);
+}
+.card3{
+transition: 0.5s ease;
+cursor: pointer;
+}
+
+
+/* card4 */
+.card4{
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 250px 150px ;
+  grid-template-areas: "image" "text" ;
+  width: 5px;
+  border-radius: 20px;
+  background: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  border: 2px solid white;
+  
+  }
+  .card4-text{
+  grid-area: text;
+  }
+  .card4-image{
+  background-color:white;
+  background:url("festivals/28.webp");
+  }
+ 
+  .card4-text .date{
+  color:rgb(255, 7, 110);
+  font-size: 13px;
+  }
+  .card4-text p{
+  color:grey;
+  font-size: 15px;
+  font-weight: 300;
+  }
+  .card4-text h2{
+    color: rgb(45, 113, 173);
+  margin-top: 0px;
+  font-size: 28px;
+  }
+  .card4:hover{
+  transform: scale(1.125);
+  box-shadow: 5px 5px  rgba(203, 3, 9, 0.6);
+  }
+  .card4{
+  transition: 0.5s ease;
+  cursor: pointer;
+  
+  }
+
+
+
+/* card5 */
+.card5{
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 250px 150px ;
+  grid-template-areas: "image" "text" ;
+  width: 5px;
+  border-radius: 10px;
+  background: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  border: 2px solid white;
+  
+  }
+  .card5-text{
+  grid-area: text;
+  }
+  .card5-image{
+  background-color:black;
+  background:url("festivals/23.jpg");
+  }
+ 
+  .card5-text .date{
+  color:rgb(255, 7, 110);
+  font-size: 13px;
+  }
+  .card5-text p{
+  color:grey;
+  font-size: 15px;
+  font-weight: 300;
+  }
+  .card5-text h2{
+    color: rgb(45, 113, 173);
+  margin-top: 0px;
+  font-size: 28px;
+  }
+  .card5:hover{
+  transform: scale(1.125);
+  box-shadow: 5px 5px  rgba(203, 9, 9, 0.6);
+  }
+  .card5{
+  transition: 0.5s ease;
+  cursor: pointer;
+  /*   margin: -28px;*/
+  }
+
+/* card6 */
+.card6{
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 250px 150px ;
+  grid-template-areas: "image" "text" ;
+  width: 5px;
+  border-radius: 10px;
+  background: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  border: 2px solid white;
+  
+  }
+  .card6-text{
+  grid-area: text;
+  }
+  .card6-image{
+  background-color:black;
+  background:url("festivals/34.jpg");
+  }
+  
+  .card6-text .date{
+  color:rgb(255, 7, 110);
+  font-size: 13px;
+  }
+  .card6-text p{
+  color:grey;
+  font-size: 15px;
+  font-weight: 300;
+  }
+  .card6-text h2{
+    color: rgb(45, 113, 173);
+  margin-top: 0px;
+  font-size: 28px;
+  }
+  .card6:hover{
+  transform: scale(1.125);
+  box-shadow: 5px 5px  rgba(203, 9, 9, 0.6);
+  }
+  .card6{
+  transition: 0.5s ease;
+  cursor: pointer;
+  }

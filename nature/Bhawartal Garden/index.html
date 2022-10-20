@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <style>
+     
+      .mySlides {
+        display: none;
+       margin-left: -180px;
+       margin-right: -60px;
+      }
+      img {
+        vertical-align:auto;
+        width: 1352px;
+        height: 600px;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+     
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+    .description{
+    font-family: fantasy;
+    color:black;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+ 
+.description:hover{
+    cursor: pointer;
+    color: brown;
+}   
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
+
+      p{
+        color:black;
+        font-size: 20px;
+        font-style:italic;       
+      }
+      p:hover{
+        color:darkviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 align="center"><b>Bhawartal Garden</b> </h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3
+        </div>
+       <img src="images/99.jpg"  >    
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/100.jpg" >
+       
+    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/101.jpg" >
+       
+    </div>
+    <br>
+<h2 align="center"> Description </h2>
+<p>
+  Bhanwartal Garden is a major tourist destination of Jabalpur city. Bhanwartal Garden is situated in the heart of Jabalpur city. You can come to visit this garden. You can come to Bhanwartal Garden  to spend time with your family and friends.  In Bhanwartal Garden  , you get an entry ticket of Rs.5. You can enter this garden by paying Rs. A man-made lake has been created throughout the garden. There is a fountain in this lake. Here the fountain starts in the evening and there is a beautiful light in the fountain, which falls on the fountain and the fountain looks very beautiful. 
+
+</p>
+<p>
+  There is a small canteen in Bhanwartal Garden . In this canteen you get items to eat and drink. You can also eat and drink by coming here. Bhanwartal Garden  is spread over a very large area. Cement chairs are made to sit in place in this garden. A swing has also been installed in the Bhanwartal Garden   for children's entertainment, in which children can swing and enjoy a lot. There is also a system of skating for children's entertainment in this park, where children can skate . Bhanwartal ParkSkating atThere is space to do it too. Here you can skate. There is no charge for skating here. Anyone can skate here. But you have to get permission to skate. You cannot go to the skating ground without permission.
+</p>
+
+<p>
+  There is also a watch tower in Bhanwartal Garden  , from where you can have a view of the entire park. This park has been built in a new way recently. A lot of people visit Bhanwartal Garden  in the evening . Here you get to see a lot of people making videos, because the environment of the park is very nice and green. Bhanwartal Garden is open in the morning and evening. This park is closed in the afternoon. You can also enjoy  photography in Bhanwartal Garden .
+</p>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
